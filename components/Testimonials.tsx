@@ -2,20 +2,20 @@
 
 const testimonials = [
   {
-    quote: "Owner of GoSitez",
-    name: "Gavin De Silva",
+    quote: "Great website and really smooth process. Love the final result.",
+    name: "Daniel",
     role: "Business Owner",
   },
   {
     quote:
       "The design quality and attention to detail exceeded our expectations.",
-    name: "Stephen De Silva",
-    role: "Janiter",
+    name: "Khalid",
+    role: "Shop Owner",
   },
   {
     quote:
-      "A smooth process from start to finish. The final result looked amazing.",
-    name: "Client Name",
+      "Clean, professional, and exactly what we needed. Highly recommend.",
+    name: "Ahmed J.",
     role: "Entrepreneur",
   },
 ];
