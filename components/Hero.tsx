@@ -54,14 +54,14 @@ export default function Hero() {
           className="mt-10 flex flex-col gap-4 sm:flex-row"
         >
           <a
-            href="#contact"
+            href="/contact"
             className="rounded-full bg-gradient-to-r from-[#5170FF] to-[#FF66C4] px-8 py-4 text-center font-medium text-white shadow-lg transition hover:scale-105"
           >
             Start a Project
           </a>
 
           <a
-            href="#portfolio"
+            href="/portfolio"
             className="rounded-full border border-gray-200 px-8 py-4 text-center font-medium text-[#111111] transition hover:bg-gray-50"
           >
             View Work

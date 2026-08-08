@@ -1,14 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Globe,
-  Bot,
-  RefreshCcw,
-  LayoutTemplate,
-  Palette,
-  Search,
-} from "lucide-react";
+import { Globe, Bot, RefreshCcw } from "lucide-react";
 
 const services = [
   {
@@ -29,31 +22,13 @@ const services = [
       "Transform outdated websites into modern digital experiences that match your brand.",
     icon: RefreshCcw,
   },
-  {
-    title: "Landing Pages",
-    description:
-      "High-converting landing pages designed for campaigns, launches, and growth.",
-    icon: LayoutTemplate,
-  },
-  {
-    title: "Branding",
-    description:
-      "Create a consistent visual identity with logos, colors, and brand systems.",
-    icon: Palette,
-  },
-  {
-    title: "SEO Optimization",
-    description:
-      "Improve your online visibility with optimized websites built for search engines.",
-    icon: Search,
-  },
 ];
 
 function Services() {
   return (
-    <section id="services" className="bg-white px-6 py-32">
-      <div className="mx-auto max-w-7xl">
-
+    <section className="py-20 sm:py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +50,8 @@ function Services() {
           </p>
         </motion.div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* Services */}
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
           {services.map((service, index) => {
             const Icon = service.icon;
 
@@ -108,6 +84,7 @@ function Services() {
           })}
         </div>
 
+        {/* Button */}
         <div className="mt-16 flex justify-center">
           <a
             href="/services"
@@ -116,7 +93,6 @@ function Services() {
             View All Services
           </a>
         </div>
-
       </div>
     </section>
   );
