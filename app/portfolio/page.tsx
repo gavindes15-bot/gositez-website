@@ -36,11 +36,10 @@ export default function PortfolioPage() {
   return (
     <>
       {/* Background gradients */}
-      <div className="absolute left-1/2 top-20 -z-0 h-80 w-80 -translate-x-1/2 rounded-full bg-[#5170FF]/15 blur-3xl" />
 
       <div className="absolute right-0 top-[600px] -z-0 h-72 w-72 rounded-full bg-[#FF66C4]/10 blur-3xl" />
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="relative z-10 mx-auto max-w-6xl">
         {/* Hero */}
         <section className="pt-20 text-center">
           <p className="mb-6 inline-flex rounded-full border border-gray-200 bg-white px-5 py-2 text-sm text-[#6B7280] shadow-sm">
