@@ -41,7 +41,7 @@ export default function PortfolioPage() {
 
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Hero */}
-        <section className="relative pt-14 text-center sm:pt-20">
+        <section className="relative pt-20 text-center sm:pt-24">
 
           {/* Hero gradient glow */}
           <div className="pointer-events-none absolute left-1/2 top-0 -z-10 h-72 w-[90%] -translate-x-1/2 rounded-full bg-gradient-to-r from-[#5170FF]/10 via-[#FF66C4]/10 to-[#5170FF]/10 blur-3xl" />
