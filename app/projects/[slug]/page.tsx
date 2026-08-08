@@ -1,13 +1,13 @@
 import Link from "next/link";
 
 const projects = {
-  "project-one": {
-    title: "Project One",
-    category: "Web Development",
+  "aloia": {
+    title: "Aloia",
+    category: "E-commerce",
     date: "2026",
     description:
       "A modern website designed to give the brand a stronger online presence.",
-    image: "/portfolio/project-1.jpg",
+    image: "/portfolio/aloia.jpg",
   },
   "project-two": {
     title: "Project Two",
