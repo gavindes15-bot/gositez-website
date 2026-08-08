@@ -37,31 +37,35 @@ export default function PortfolioPage() {
     <>
       {/* Background gradients */}
 
-      <div className="absolute right-0 top-[600px] -z-0 h-72 w-72 rounded-full bg-[#FF66C4]/10 blur-3xl" />
+      <div className="absolute right-0 top-[500px] -z-0 h-60 w-60 rounded-full bg-[#FF66C4]/10 blur-3xl sm:top-[600px] sm:h-72 sm:w-72" />
 
-      <div className="relative z-10 mx-auto max-w-6xl">
+      <div className="relative z-10 mx-auto max-w-7xl">
         {/* Hero */}
-        <section className="pt-20 text-center">
-          <p className="mb-6 inline-flex rounded-full border border-gray-200 bg-white px-5 py-2 text-sm text-[#6B7280] shadow-sm">
+        <section className="relative pt-14 text-center sm:pt-20">
+
+          {/* Hero gradient glow */}
+          <div className="pointer-events-none absolute left-1/2 top-0 -z-10 h-72 w-[90%] -translate-x-1/2 rounded-full bg-gradient-to-r from-[#5170FF]/10 via-[#FF66C4]/10 to-[#5170FF]/10 blur-3xl" />
+
+          <p className="mb-5 inline-flex rounded-full border border-gray-200 bg-white px-4 py-1.5 text-xs text-[#6B7280] shadow-sm sm:mb-6 sm:px-5 sm:py-2 sm:text-sm">
             Our Portfolio
           </p>
 
-          <h1 className="mx-auto max-w-5xl text-5xl font-semibold tracking-tight text-[#111111] sm:text-7xl lg:text-8xl">
+          <h1 className="mx-auto max-w-5xl text-4xl font-semibold tracking-tight text-[#111111] sm:text-7xl lg:text-8xl">
             Work we're{" "}
             <span className="bg-gradient-to-r from-[#5170FF] to-[#FF66C4] bg-clip-text text-transparent">
               proud of.
             </span>
           </h1>
 
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-[#6B7280]">
+          <p className="mx-auto mt-6 max-w-2xl px-4 text-base leading-relaxed text-[#6B7280] sm:mt-8 sm:px-0 sm:text-lg">
             Explore some of the websites, brands, and digital experiences
             we've created for modern businesses.
           </p>
         </section>
 
         {/* Portfolio Grid */}
-        <section className="mt-24">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <section className="mt-16 px-4 sm:mt-24 sm:px-0">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 sm:gap-8">
             {projects.map((project) => (
               <Link
                 key={project.slug}
@@ -70,7 +74,7 @@ export default function PortfolioPage() {
                     ? "/projects/aloia"
                     : `/projects/${project.slug}`
                 }
-                className="group block overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="group block overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:rounded-3xl"
               >
                 {/* Image */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
@@ -82,26 +86,26 @@ export default function PortfolioPage() {
                 </div>
 
                 {/* Content */}
-                <div className="p-7">
+                <div className="p-5 sm:p-7">
                   <div className="flex items-center justify-between gap-4">
-                    <span className="text-sm font-medium text-[#5170FF]">
+                    <span className="text-xs font-medium text-[#5170FF] sm:text-sm">
                       {project.category}
                     </span>
 
-                    <span className="text-sm text-[#9CA3AF]">
+                    <span className="text-xs text-[#9CA3AF] sm:text-sm">
                       {project.date}
                     </span>
                   </div>
 
-                  <h2 className="mt-4 text-2xl font-semibold text-[#111111]">
+                  <h2 className="mt-3 text-xl font-semibold text-[#111111] sm:mt-4 sm:text-2xl">
                     {project.title}
                   </h2>
 
-                  <p className="mt-3 leading-relaxed text-[#6B7280]">
+                  <p className="mt-2 text-sm leading-relaxed text-[#6B7280] sm:mt-3 sm:text-base">
                     {project.description}
                   </p>
 
-                  <div className="mt-6 text-sm font-medium text-[#111111] transition group-hover:text-[#5170FF]">
+                  <div className="mt-5 text-sm font-medium text-[#111111] transition group-hover:text-[#5170FF] sm:mt-6">
                     View Project →
                   </div>
                 </div>
@@ -111,26 +115,26 @@ export default function PortfolioPage() {
         </section>
 
         {/* CTA */}
-        <section className="relative mt-28 overflow-hidden rounded-[2rem] bg-[#111111] px-8 py-16 text-center sm:px-16">
-          <div className="absolute left-1/2 top-0 h-64 w-64 -translate-x-1/2 rounded-full bg-[#5170FF]/30 blur-3xl" />
+        <section className="relative mx-4 mt-20 mb-20 overflow-hidden rounded-[1.5rem] bg-[#111111] px-6 py-12 text-center sm:mx-0 sm:mt-28 sm:mb-28 sm:rounded-[2rem] sm:px-16 sm:py-16">
+          <div className="absolute left-1/2 top-0 h-52 w-52 -translate-x-1/2 rounded-full bg-[#5170FF]/30 blur-3xl sm:h-64 sm:w-64" />
 
           <div className="relative z-10">
-            <p className="text-sm font-medium text-[#FF66C4]">
+            <p className="text-xs font-medium text-[#FF66C4] sm:text-sm">
               YOUR PROJECT NEXT
             </p>
 
-            <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+            <h2 className="mx-auto mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-white sm:mt-4 sm:text-5xl">
               Want to see your business here?
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-gray-300">
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-gray-300 sm:mt-6 sm:text-base">
               Let's create something that makes your business stand out
               online.
             </p>
 
             <Link
               href="/contact"
-              className="mt-8 inline-flex rounded-full bg-gradient-to-r from-[#5170FF] to-[#FF66C4] px-8 py-4 font-medium text-white shadow-lg transition hover:scale-105"
+              className="mt-6 inline-flex rounded-full bg-gradient-to-r from-[#5170FF] to-[#FF66C4] px-7 py-3 text-sm font-medium text-white shadow-lg transition hover:scale-105 sm:mt-8 sm:px-8 sm:py-4"
             >
               Start a Project
             </Link>
