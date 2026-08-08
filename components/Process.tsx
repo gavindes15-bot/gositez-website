@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 const steps = [
   {
     number: "01",
@@ -31,16 +29,10 @@ const steps = [
 
 function Process() {
   return (
-    <section className="bg-white px-6 py-32">
-      <div className="mx-auto max-w-7xl">
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="max-w-3xl"
-        >
+    <section className="py-12 sm:py-14">
+      <div className="mx-auto max-w-7xl px-6">
+        {/* Heading */}
+        <div className="max-w-3xl">
           <p className="mb-4 text-sm font-medium text-[#6B7280]">
             Our Process
           </p>
@@ -53,20 +45,14 @@ function Process() {
             From the first conversation to launch day, we make building your
             digital presence simple and seamless.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2">
-          {steps.map((step, index) => (
-            <motion.div
+        {/* Process Steps */}
+        <div className="mt-12 grid gap-8 md:grid-cols-2">
+          {steps.map((step) => (
+            <div
               key={step.number}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.15,
-              }}
-              viewport={{ once: true }}
-              className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+              className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm"
             >
               <div className="mb-6 flex items-center gap-4">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-r from-[#5170FF] to-[#FF66C4] text-lg font-semibold text-white shadow-lg">
@@ -81,10 +67,9 @@ function Process() {
               <p className="leading-relaxed text-[#6B7280]">
                 {step.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
-
       </div>
     </section>
   );

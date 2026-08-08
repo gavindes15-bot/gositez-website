@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Globe, Bot, RefreshCcw } from "lucide-react";
 
 const services = [
@@ -26,16 +25,10 @@ const services = [
 
 function Services() {
   return (
-    <section className="py-20 sm:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="py-12 sm:py-14">
+      <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="max-w-3xl"
-        >
+        <div className="max-w-3xl">
           <p className="mb-4 text-sm font-medium text-[#6B7280]">
             Services
           </p>
@@ -48,25 +41,17 @@ function Services() {
             From websites to AI-powered systems, we create digital solutions
             that help modern businesses grow.
           </p>
-        </motion.div>
+        </div>
 
         {/* Services */}
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
-          {services.map((service, index) => {
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {services.map((service) => {
             const Icon = service.icon;
 
             return (
-              <motion.div
+              <div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                }}
-                viewport={{ once: true }}
-                whileHover={{ y: -8 }}
-                className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm transition hover:shadow-xl"
+                className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm"
               >
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-r from-[#5170FF] to-[#FF66C4] text-white shadow-lg">
                   <Icon size={24} />
@@ -79,16 +64,16 @@ function Services() {
                 <p className="mt-4 leading-relaxed text-[#6B7280]">
                   {service.description}
                 </p>
-              </motion.div>
+              </div>
             );
           })}
         </div>
 
         {/* Button */}
-        <div className="mt-16 flex justify-center">
+        <div className="mt-12 flex justify-center">
           <a
             href="/services"
-            className="rounded-full bg-gradient-to-r from-[#5170FF] to-[#FF66C4] px-8 py-4 font-medium text-white shadow-lg transition hover:scale-105"
+            className="rounded-full bg-gradient-to-r from-[#5170FF] to-[#FF66C4] px-8 py-4 font-medium text-white shadow-lg"
           >
             View All Services
           </a>

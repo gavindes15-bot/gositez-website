@@ -1,11 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 const testimonials = [
   {
-    quote:
-      "Owner of GoSitez",
+    quote: "Owner of GoSitez",
     name: "Gavin De Silva",
     role: "Business Owner",
   },
@@ -25,16 +22,10 @@ const testimonials = [
 
 function Testimonials() {
   return (
-    <section className="bg-white px-6 py-32">
-      <div className="mx-auto max-w-7xl">
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="max-w-3xl"
-        >
+    <section className="py-12 sm:py-14">
+      <div className="mx-auto max-w-7xl px-6">
+        {/* Heading */}
+        <div className="max-w-3xl">
           <p className="mb-4 text-sm font-medium text-[#6B7280]">
             Testimonials
           </p>
@@ -46,31 +37,20 @@ function Testimonials() {
           <p className="mt-6 text-lg text-[#6B7280]">
             See what our clients say about working with Gositez.
           </p>
-        </motion.div>
+        </div>
 
-
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
-
+        {/* Testimonials */}
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {testimonials.map((testimonial, index) => (
-            <motion.div
+            <div
               key={testimonial.name + index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.15,
-              }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm transition hover:shadow-xl"
+              className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm"
             >
-
               <p className="text-lg leading-relaxed text-[#111111]">
                 "{testimonial.quote}"
               </p>
 
               <div className="mt-8 flex items-center gap-4">
-
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-[#5170FF] to-[#FF66C4] font-semibold text-white">
                   G
                 </div>
@@ -84,14 +64,10 @@ function Testimonials() {
                     {testimonial.role}
                   </p>
                 </div>
-
               </div>
-
-            </motion.div>
+            </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );

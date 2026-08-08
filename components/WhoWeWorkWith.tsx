@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 const audiences = [
   {
     emoji: "🛍️",
@@ -31,16 +27,9 @@ const audiences = [
 
 function WhoWeWorkWith() {
   return (
-    <section className="bg-white px-6 py-32">
-      <div className="mx-auto max-w-7xl">
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="max-w-3xl"
-        >
+    <section className="py-12 sm:py-14">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="max-w-3xl">
           <p className="mb-4 text-sm font-medium text-[#6B7280]">
             Who We Work With
           </p>
@@ -53,25 +42,15 @@ function WhoWeWorkWith() {
             From growing startups to established brands, we create digital
             experiences built around your goals.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {audiences.map((item, index) => (
-            <motion.div
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {audiences.map((item) => (
+            <div
               key={item.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.1,
-              }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm transition hover:shadow-xl"
+              className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm"
             >
-              <div className="mb-6 text-4xl">
-                {item.emoji}
-              </div>
+              <div className="mb-6 text-4xl">{item.emoji}</div>
 
               <h3 className="text-xl font-semibold text-[#111111]">
                 {item.title}
@@ -80,10 +59,9 @@ function WhoWeWorkWith() {
               <p className="mt-4 leading-relaxed text-[#6B7280]">
                 {item.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
-
       </div>
     </section>
   );

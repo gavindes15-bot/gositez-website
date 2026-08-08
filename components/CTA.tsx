@@ -4,21 +4,18 @@ import { motion } from "framer-motion";
 
 const CTA = () => {
   return (
-    <section className="px-6 py-32">
-      <div className="mx-auto max-w-7xl">
-
+    <section className="py-12 sm:py-14">
+      <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#5170FF] to-[#FF66C4] px-8 py-20 text-center sm:px-16"
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#5170FF] to-[#FF66C4] px-8 py-12 text-center sm:px-16 sm:py-14"
         >
-
           <div className="absolute left-1/2 top-0 h-64 w-64 -translate-x-1/2 rounded-full bg-white/20 blur-3xl" />
 
           <div className="relative z-10 mx-auto max-w-3xl">
-
             <p className="mb-4 text-sm font-medium text-white/80">
               Get Started
             </p>
@@ -34,7 +31,6 @@ const CTA = () => {
             </p>
 
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-
               <a
                 href="/contact"
                 className="rounded-full bg-white px-8 py-4 font-medium text-[#111111] shadow-lg transition hover:scale-105"
@@ -48,13 +44,9 @@ const CTA = () => {
               >
                 Contact Us
               </a>
-
             </div>
-
           </div>
-
         </motion.div>
-
       </div>
     </section>
   );

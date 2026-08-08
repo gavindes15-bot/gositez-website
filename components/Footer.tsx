@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-gray-100 bg-white px-6 py-16">
-      <div className="mx-auto max-w-7xl">
-
+    <footer className="bg-[#F8F8F8] py-12 sm:py-14">
+      <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -14,11 +14,14 @@ const Footer = () => {
           viewport={{ once: true }}
           className="grid gap-12 md:grid-cols-4"
         >
-
+          {/* Brand */}
           <div className="md:col-span-2">
-            <h2 className="text-3xl font-semibold tracking-tight text-[#111111]">
+            <Link
+              href="/"
+              className="text-3xl font-semibold tracking-tight text-[#111111]"
+            >
               GOSITEZ
-            </h2>
+            </Link>
 
             <p className="mt-4 max-w-sm text-[#6B7280]">
               Premium websites, AI automation, and digital experiences built
@@ -26,55 +29,108 @@ const Footer = () => {
             </p>
           </div>
 
-
+          {/* Navigation */}
           <div>
-            <h3 className="font-semibold text-[#111111]">
-              Navigation
-            </h3>
+            <h3 className="font-semibold text-[#111111]">Navigation</h3>
 
-            <ul className="mt-4 space-y-3 text-[#6B7280]">
-              <li>Home</li>
-              <li>Services</li>
-              <li>Portfolio</li>
-              <li>Contact</li>
+            <ul className="mt-4 space-y-3">
+              <li>
+                <Link
+                  href="/"
+                  className="text-[#6B7280] transition hover:text-[#111111]"
+                >
+                  Home
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/services"
+                  className="text-[#6B7280] transition hover:text-[#111111]"
+                >
+                  Services
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/portfolio"
+                  className="text-[#6B7280] transition hover:text-[#111111]"
+                >
+                  Portfolio
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/about"
+                  className="text-[#6B7280] transition hover:text-[#111111]"
+                >
+                  About
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-[#6B7280] transition hover:text-[#111111]"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
-
+          {/* Services */}
           <div>
-            <h3 className="font-semibold text-[#111111]">
-              Services
-            </h3>
+            <h3 className="font-semibold text-[#111111]">Services</h3>
 
-            <ul className="mt-4 space-y-3 text-[#6B7280]">
-              <li>Website Design</li>
-              <li>AI Automation</li>
-              <li>Branding</li>
-              <li>Digital Solutions</li>
+            <ul className="mt-4 space-y-3">
+              <li>
+                <Link
+                  href="/services"
+                  className="text-[#6B7280] transition hover:text-[#111111]"
+                >
+                  Website Design
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/services"
+                  className="text-[#6B7280] transition hover:text-[#111111]"
+                >
+                  AI & DM Automation
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/services"
+                  className="text-[#6B7280] transition hover:text-[#111111]"
+                >
+                  Website Redesign
+                </Link>
+              </li>
             </ul>
           </div>
-
         </motion.div>
 
-
-        <div className="mt-16 flex flex-col justify-between gap-4 border-t border-gray-100 pt-8 text-sm text-[#6B7280] sm:flex-row">
-
-          <p>
-            © {new Date().getFullYear()} Gositez. All rights reserved.
-          </p>
+        {/* Bottom */}
+        <div className="mt-12 flex flex-col justify-between gap-4 border-t border-gray-200 pt-8 text-sm text-[#6B7280] sm:flex-row">
+          <p>© {new Date().getFullYear()} Gositez. All rights reserved.</p>
 
           <div className="flex gap-6">
-            <a href="#">
+            <a
+              href="https://www.instagram.com/gositez/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-[#111111]"
+            >
               Instagram
             </a>
-
-            <a href="#">
-              LinkedIn
-            </a>
           </div>
-
         </div>
-
       </div>
     </footer>
   );
