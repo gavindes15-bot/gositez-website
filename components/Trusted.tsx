@@ -13,10 +13,10 @@ const logos = [
 
 function Trusted() {
   return (
-    <section className="overflow-hidden border-y border-gray-100 bg-white py-16">
-      <div className="mx-auto max-w-7xl px-6">
-        <p className="mb-10 text-center text-sm text-[#6B7280]">
-          Selected brands
+    <section className="py-16">
+      <div className="mx-auto max-w-6xl">
+        <p className="mb-10 text-center text-sm font-medium uppercase tracking-widest text-gray-400">
+          Featured brands
         </p>
 
         <div className="relative flex overflow-hidden">
@@ -27,12 +27,27 @@ function Trusted() {
               repeat: Infinity,
               ease: "linear",
             }}
-            className="flex min-w-max gap-16"
+            className="flex min-w-max items-center gap-20"
           >
             {[...logos, ...logos].map((logo, index) => (
               <div
                 key={index}
-                className="text-2xl font-semibold tracking-widest text-gray-300"
+                className={`
+                  whitespace-nowrap text-gray-300
+                  ${
+                    logo === "LUMINA"
+                      ? "text-2xl font-semibold tracking-[0.22em]"
+                      : logo === "NOVA"
+                      ? "text-3xl font-bold tracking-tight"
+                      : logo === "VERTEX"
+                      ? "text-2xl font-medium tracking-[0.12em]"
+                      : logo === "AURORA"
+                      ? "text-2xl font-semibold tracking-[0.18em]"
+                      : logo === "NEXUS"
+                      ? "text-2xl font-bold tracking-[0.08em]"
+                      : "text-2xl font-medium tracking-[0.25em]"
+                  }
+                `}
               >
                 {logo}
               </div>

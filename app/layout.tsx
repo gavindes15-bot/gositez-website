@@ -11,9 +11,80 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Gositez | Premium Web Design Agency",
+  metadataBase: new URL("https://gositez-website.vercel.app"),
+
+  title: {
+    default: "Gositez | Premium Web Design Agency in Dubai",
+    template: "%s | Gositez",
+  },
+
   description:
-    "Gositez creates premium websites, Shopify stores, AI automation, and digital experiences for modern businesses.",
+    "Gositez is a Dubai-based digital agency creating premium websites, Shopify stores, branding, and automation for modern businesses.",
+
+  keywords: [
+    "Gositez",
+    "Gositez AE",
+    "Gositez UAE",
+    "Gositez Dubai",
+    "Gositez website",
+    "Gositez web design",
+    "Gositez web development",
+    "web design Dubai",
+    "web development Dubai",
+    "Shopify website design Dubai",
+    "branding Dubai",
+    "digital agency Dubai",
+  ],
+
+  authors: [
+    {
+      name: "Gavin DeSilva",
+    },
+  ],
+
+  creator: "Gavin DeSilva",
+  publisher: "Gositez",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_AE",
+    url: "https://gositez-website.vercel.app",
+    siteName: "Gositez",
+    title: "Gositez | Premium Web Design Agency in Dubai",
+    description:
+      "Gositez is a Dubai-based digital agency creating premium websites, Shopify stores, branding, and automation for modern businesses.",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Gositez | Premium Web Design Agency in Dubai",
+    description:
+      "Gositez is a Dubai-based digital agency creating premium websites, Shopify stores, branding, and automation for modern businesses.",
+  },
+
+  other: {
+    "instagram:site": "@gositez",
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +97,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} h-full antialiased`}
     >
-      <body className="min-h-screen">
+      <body>
         <Navbar />
 
         {children}
