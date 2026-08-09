@@ -1,4 +1,37 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About Gositez | Founded by Gavin De Silva",
+  description:
+    "Learn about Gositez, a Dubai-based digital agency founded by Gavin De Silva, creating modern websites, automation, and branding for businesses.",
+  keywords: [
+    "Gositez",
+    "Gositez Dubai",
+    "Gositez UAE",
+    "Gavin De Silva",
+    "Gavin De Silva Gositez",
+    "Gositez founder",
+    "Gositez website",
+    "digital agency Dubai",
+  ],
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Gositez | Founded by Gavin De Silva",
+    description:
+      "Learn about Gositez, a Dubai-based digital agency founded by Gavin De Silva, creating modern websites, automation, and branding for businesses.",
+    url: "/about",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Gositez | Founded by Gavin De Silva",
+    description:
+      "Learn about Gositez, a Dubai-based digital agency founded by Gavin De Silva, creating modern websites, automation, and branding for businesses.",
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -89,7 +122,7 @@ export default function AboutPage() {
                 </h2>
 
                 <p className="mt-5 text-lg font-medium text-[#111111]">
-                  Gavin DeSilva
+                  Gavin De Silva
                 </p>
 
                 <p className="mt-1 text-sm text-[#6B7280]">

@@ -38,11 +38,11 @@ export const metadata: Metadata = {
 
   authors: [
     {
-      name: "Gavin DeSilva",
+      name: "Gavin De Silva",
     },
   ],
 
-  creator: "Gavin DeSilva",
+  creator: "Gavin De Silva",
   publisher: "Gositez",
 
   alternates: {
@@ -87,6 +87,42 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gositez-website.vercel.app/#organization",
+      name: "Gositez",
+      url: "https://gositez-website.vercel.app",
+      description:
+        "Gositez is a Dubai-based digital agency creating premium websites, Shopify stores, branding, and automation for modern businesses.",
+      founder: {
+        "@id": "https://gositez-website.vercel.app/#gavin-de-silva",
+      },
+      sameAs: ["https://www.instagram.com/gositez/"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gositez-website.vercel.app/#website",
+      url: "https://gositez-website.vercel.app",
+      name: "Gositez",
+      publisher: {
+        "@id": "https://gositez-website.vercel.app/#organization",
+      },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://gositez-website.vercel.app/#gavin-de-silva",
+      name: "Gavin De Silva",
+      jobTitle: "Founder",
+      worksFor: {
+        "@id": "https://gositez-website.vercel.app/#organization",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -103,6 +139,13 @@ export default function RootLayout({
         {children}
 
         <Footer />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
       </body>
     </html>
   );
