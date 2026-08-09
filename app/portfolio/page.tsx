@@ -14,20 +14,20 @@ const projects = [
   },
   {
     slug: "project-two",
-    title: "Project Two",
-    category: "Branding",
+    title: "SOGAH by M.A",
+    category: "E-commerce",
     date: "2026",
     description:
-      "A complete visual identity created to give the brand a consistent and premium look.",
+      "A premium e-commerce website designed to showcase SOGAH's gifts and kits.",
     image: "/portfolio/project-2.jpg",
   },
   {
     slug: "project-three",
-    title: "Project Three",
-    category: "Web Development",
+    title: "Aureon",
+    category: "E-commerce",
     date: "2026",
     description:
-      "A clean and conversion-focused digital experience built around the business.",
+      "A premium e-commerce website designed to showcase Aureon's premium linen essentials.",
     image: "/portfolio/project-3.jpg",
   },
 ];
