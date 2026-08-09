@@ -45,6 +45,10 @@ export const metadata: Metadata = {
   creator: "Gavin De Silva",
   publisher: "Gositez",
 
+  verification: {
+    google: "MN5gh4wAOuXWAZask4fvPZHcrtCki2dM0gheRVb5VWw",
+  },
+
   alternates: {
     canonical: "/",
   },
